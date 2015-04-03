@@ -186,7 +186,7 @@ $(function () {
  
  
 $(function () {
-    $('#bubble2').highcharts({
+    $('#bubblea').highcharts({
  
         chart: {
             type: 'bubble',
