@@ -58,48 +58,6 @@ document.getElementById('input1')=0
   
 <h3>Des points plus faciles à obtenir devant son public</h3>
 
-<script type="text/javascript">
-
-$(function () {
-    $('#container').highcharts({
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Stacked column chart'
-        },
-        xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Total fruit consumption'
-            }
-        },
-        tooltip: {
-            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-            shared: true
-        },
-        plotOptions: {
-            column: {
-                stacking: 'percent'
-            }
-        },
-        series: [{
-            name: 'Extérieur',
-            data: [5, 3, 4, 7, 2]
-        }, {
-            name: 'Domicile',
-            data: [2, 2, 3, 2, 1]
-        }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5]
-        }]
-    });
-});
-
-</script>
 
 
 <p>L'équipe qui reçoit empoche la victoire dans 45% des cas tandis que l'équipe qui se déplace ne revient avec les trois points que dans 26% des cas. Cette avantage se traduit de manière nette lorsque l'on s'intéresse au nombre de point que les équipes obtienne en moyenne chaque saison. Les équipes glanent 60% de leurs points dans leur stade.
@@ -111,8 +69,6 @@ $(function () {
 
 
 <div id="retournement" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-
 
 
 
