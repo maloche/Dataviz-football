@@ -12,7 +12,7 @@ chart: {
 type: 'column'
 },
 title: {
-text: 'Plus la sanction est grave, plus l effet domicile est marqué'
+text: 'Plus la sanction est grave, plus l\'effet domicile est marqué'
 },
 xAxis: {
 categories: ['Fautes', 'Cartons jaunes', 'Cartons rouges']
