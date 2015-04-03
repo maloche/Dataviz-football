@@ -3,30 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Le 13ème homme, décisif ou imaginaire?</title>
+<title>Le 12ème homme</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="pygment_trac.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="java.js"></script>
-<script src="boutons.js"></script>
+<script src="boutons1.js"></script>
 <script src="highcharts-more.js"></script>
 <script src="highcharts.js"></script>
 <script src="exporting.js"></script>
+
   
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
-<body>
+<body onLoad="Resets()">
 <header>
-<h1>Le 13ème homme, décisif ou imaginaire?</h1>
+<h1>Le 12ème homme </h1>
 <p>Analyse du championnat de Ligue 1 de football</p>
 <p>des saisons 2007/2008 à 2013/2014.</p>
 </header>
+<script>
+document.getElementById('input1')=0
+</script>
 
 <section>
+
 <h1>
 <a id="dataviz-football" class="anchor" href="#dataviz-football" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataviz-football</h1>
 
@@ -42,12 +47,19 @@
 <h3>Des points plus faciles à obtenir devant son public</h3>
 
 <p>L'équipe qui reçoit empoche la victoire dans 45% des cas tandis que l'équipe qui se déplace ne revient avec les trois points que dans 26% des cas. Cette avantage se traduit de manière nette lorsque l'on s'intéresse au nombre de point que les équipes obtienne en moyenne chaque saison. Les équipes glanent 60% de leurs points dans leur stade.
-<div id="points" style="width: 300px; height: 400px; margin: 0 auto"></div>
+<div id="points" style="width: 350px; height: 400px; margin: 0 auto"></div>
 
 <p>&nbsp;</p>
 <h3>Des facilités à retourner une siuation mal embarquée</h3>
 <p>Une équipe évoluant chez elle peut aller chercher des ressources mentales lui permettant de retourner des situations mal embarquées qui sont plus difficiles de mobiliser lorsqu'elle joue à l'extérieur. Chaque saison, 77 équipes réussisent à sortir vainqueur d'une rencontre alors qu'il ne poosédait virtuellement qu'un point à la mi-temps. 45 de ces équipes jouaient à domiciles. Fait plus rare, 11 équipes sortent vaiqueurs du match alorss qu'elles étaient menées à la mi-temps. Dans 52% des cas, cette équipe évoluait à domicile.</p>
+
+
 <div id="retournement" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+
+
 
 <p>&nbsp;</p>
 <h2>Les causes quantitatives de l'avantage de reçevoir</h2>
@@ -55,7 +67,7 @@
 <h3>Un arbitrage à la maison?</h3>
 <p>L'arbitrage à la maison est une expression que tous les amateurs de football ont déjà entendu, lles chiffres confirment-t-ils cette idée?</p>
 <p>Si les joueurs ne commettent que 5% de fautes supplémentaires lorsuq'ils jouent à l'extérieur, ils se voient sanctionner d'une carton jaune 20% fois plus, et sont exclu 35% fois plus souvent. Ces chiffres laisssent donc penser qu'au moment de sortir la biscotte ou encore plus lorsqu'il s'agit d'exclure un joueur, l'arbitre peut être influencé par l'ambiance régnant dans le stade.</p>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="carton" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <p>&nbsp;</p>
 <h3>Une réussite acrue dans les moments décisifs de la rencontre</h3>
 <p>Fasse à un public hostile les joueurs semblent réussirent plus difficillement à réussir le geste juste lorsqu'ils se retrouvent face aux buts. Les joueurs jouant à domiciles frappes au but 20% plus souvent que leurs adversaires du jour, ils cadrent 23% fois plus et surtout marquent 27% plus de buts. Les joueurs évoluant devant leurs supporteurs sont donc en moyenne plus efficaces devant le but, le 13ème homme aiderait donc les joueurs à rester faire le bon geste au moment de déclencher une frappe.
@@ -68,10 +80,12 @@
 <p>&nbsp;</p>
 <h3>Quelles équipes bénéficent le plus de l'effet domicile?</h3>
 
-<div id="bubble1" style="height: 400px; min-width: 310px; max-width: 600px; margin: 0 auto"></div>
-<p>&nbsp;</p>
-<h3>Détails des statistiques de votre équipe</h3>
 
+<p>&nbsp;</p>
+
+
+<h3>Détails des statistiques de votre équipe</h3>
+<p>Cliquer sur l'équipe de votre choix pour afficher ces statistiques.</p>
 <p>
   <input name="Ajaccio" type="image" value="Ajaccio" src="../Dropbox/Data Viz - Football/Logos/Ajaccio.png" onClick="javascript:Ajaccio()" class="btn_taille_egale">
   <input name="ArlesAvignon" type="image" value="ArlesAvignon" src="../Dropbox/Data Viz - Football/Logos/ArlesAvignon.png" onClick="javascript:ArlesAvignon()" class="btn_taille_egale">
@@ -99,30 +113,43 @@
   <input name="Nice" type="image" value="Nice" src="../Dropbox/Data Viz - Football/Logos/Nice.png" onClick="javascript:Nice()" class="btn_taille_egale">
   <input name="OL" type="image" value="OL" src="../Dropbox/Data Viz - Football/Logos/OL.png" onClick="javascript:OL()" class="btn_taille_egale">
   <input name="OM" type="image" value="OM" src="../Dropbox/Data Viz - Football/Logos/OM.png" onClick="javascript:OM()" class="btn_taille_egale">
-  <input name="PSG" type="image" value="PSG" src="../Dropbox/Data Viz - Football/Logos/PSG.png" onClick="javascript:PSG()" class="btn_taille_egale">
+  <input name="PSG" type="image" id="PSG" value="PSG" src="../Dropbox/Data Viz - Football/Logos/PSG.png" onClick="javascript:PSG()" class="btn_taille_egale">
   <input name="Reims" type="image" value="Reims" src="../Dropbox/Data Viz - Football/Logos/Reims.png" onClick="javascript:Reims()" class="btn_taille_egale">
   <input name="Rennes" type="image" value="Rennes" src="../Dropbox/Data Viz - Football/Logos/Rennes.png" onClick="javascript:Rennes()" class="btn_taille_egale">
-  <input name="Sedan" type="image" value="Sedan" src="../Dropbox/Data Viz - Football/Logos/Sedan.png" onClick="javascript:Sedan()" class="btn_taille_egale">
   <input name="Sochaux" type="image" value="Sochaux" src="../Dropbox/Data Viz - Football/Logos/Sochaux.png" onClick="javascript:Sochaux()" class="btn_taille_egale">
   <input name="strasbourg" type="image" value="strasbourg" src="../Dropbox/Data Viz - Football/Logos/strasbourg.png" onClick="javascript:strasbourg()" class="btn_taille_egale">
   <input name="Toulouse" type="image" value="Toulouse" src="../Dropbox/Data Viz - Football/Logos/Toulouse.png" onClick="javascript:Toulouse()" class="btn_taille_egale">
   <input name="Troyes" type="image" value="Troyes" src="../Dropbox/Data Viz - Football/Logos/Troyes.png" onClick="javascript:Troyes()" class="btn_taille_egale">
   <input name="Valenciennes" type="image" value="Valenciennes" src="../Dropbox/Data Viz - Football/Logos/Valenciennes.png" onClick="javascript:Valenciennes()" class="btn_taille_egale">
-  </p>
 </p>
-<p>&nbsp;</p>
-<div id="points_eq" style="width: 300px; height: 400px; margin: 0 auto"></div>
-<div id="retournement_eq" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<div id="container_eq" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<div id="reussite_eq" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<h4>
+  Vous avez sélectionné: 
+    <input type="text" id="input1" value="" readonly="readonly" size="20">
+</h4>
+<p>&nbsp; </p>
+<center>
+  <h3>Affluence: <input type="text" id="afflu" value="" readonly="readonly" size="4"></h3>
+</center>
 
-<p><em>Dataviz réalisée par Thomas Garcia, Malo Chevillotte et Charles Maisant. Développée avec l'aide de <a href="http://toucantoco.com/">Toucan Toco</a></p></em></p>
+<div id="pointseq" style="width: 350px; height: 400px; margin: 0 auto"></div>
+<br>
+
+<div id="retournementeq" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<br>
+<div id="cartoneq" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<br>
+<div id="reussiteeq" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<br>
+<h2>&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h3>Sources</h3>
+<p><a href="http://www.football-data.co.uk/francem.php">Football-data</a> et <a href="http://www.stades-spectateurs.com/historique-affluences-spectateurs.php">Stades et Spectateurs</a>.</p>
+
 </section>
+
 <footer>
-
+<p><em>Dataviz réalisée par Thomas Garcia, Malo Chevillotte et Charles Maisant. Développée avec l'aide de <a href="http://toucantoco.com/">Toucan Toco</a></p></em></p>
 </footer>
-</div>
 </body>
-</html>
 
- 
+</html>
