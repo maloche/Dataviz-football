@@ -92,7 +92,7 @@ $(function () {
             text: 'Victoires après avoir été mené à la mi-temps'
         },
         xAxis: {
-            categories: ['D un match nul à une victoire', 'D une défaite à une victoire']
+            categories: ['D\'un match nul à une victoire', 'D\'une défaite à une victoire']
         },
         yAxis: {
             min: 0,
@@ -126,7 +126,7 @@ $(function () {
             type: 'column'
         },
         title: {
-            text: 'Nombre de points obtenue au cours d une saison'
+            text: 'Nombre de points obtenue au cours d\'une saison'
         },
         xAxis: {
             categories: ['']
@@ -261,7 +261,7 @@ $(function () {
             type: 'column'
         },
         title: {
-            text: 'Nombre de points obtenue au cours d une saison'
+            text: 'Nombre de points obtenue au cours d\'une saison'
         },
         xAxis: {
             categories: ['']
@@ -329,7 +329,7 @@ $(function () {
             text: 'Victoires après avoir été mené à la mi-temps'
         },
         xAxis: {
-            categories: ['D un match nul à une victoire', 'D une défaite à une victoire']
+            categories: ['D\'un match nul à une victoire', 'D\'une défaite à une victoire']
         },
         yAxis: {
             min: 0,
@@ -363,7 +363,7 @@ chart: {
 type: 'column'
 },
 title: {
-text: 'Nombre de faute et de carton au cours d un match'
+text: 'Nombre de faute et de carton au cours d\'un match'
 },
 xAxis: {
 categories: ['Fautes', 'Cartons jaunes', 'Cartons rouges']
@@ -399,7 +399,7 @@ chart: {
 type: 'column'
 },
 title: {
-text: 'Nombre de buts et de frappes au cours d un match'
+text: 'Nombre de buts et de frappes au cours d\'un match'
 },
 xAxis: {
 categories: ['Frappes', 'Frappes cadrees', 'Buts']
